@@ -3,8 +3,12 @@
 from typing import Any, Mapping, Union, TypeVar
 
 
+T = TypeVar('T')
+R = Union[Any, T]
+
+
 def safely_get_value(dct: Mapping, key: Any,
-                     default: Union[T, None] = None) -> Union[Any, TypeVar('T')]:
+                     default: Union[T, None] = None) -> R:
     '''extract a value from a dictionnary'''
     if key in dct:
         return dct[key]
