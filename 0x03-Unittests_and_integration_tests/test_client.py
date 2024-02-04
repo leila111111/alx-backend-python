@@ -9,6 +9,7 @@ from fixtures import TEST_PAYLOAD
 from requests import HTTPError
 from client import GithubOrgClient
 
+
 class TestGithubOrgClient(unittest.TestCase):
     """Testing GithubOrgClient"""
     @parameterized.expand([
@@ -20,4 +21,3 @@ class TestGithubOrgClient(unittest.TestCase):
         """Testing org method."""
         github_client = GithubOrgClient(org)
         self.assertEqual(github_client.org(), response)
-    
