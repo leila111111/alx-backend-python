@@ -11,7 +11,7 @@ from client import GithubOrgClient
 
 
 class TestGithubOrgClient(unittest.TestCase):
-    """Testing GithubOrgClient
+    """Testing GithubOrgClient returns the correct value
     """
     @parameterized.expand([
         ("google", {"payload": True}),
@@ -19,7 +19,7 @@ class TestGithubOrgClient(unittest.TestCase):
     ])
     @patch("client.get_json")
     def test_org(self, org: str, response: Dict) -> None:
-        """Testing org method.
+        """Testing org method returns the correct value.
         """
         github_client = GithubOrgClient(org)
         self.assertEqual(github_client.org(), response)
