@@ -3,10 +3,7 @@
 """
 import unittest
 from typing import Dict
-from unittest.mock import PropertyMock, patch, Mock, MagicMock
-from parameterized import parameterized, parameterized_class
-from fixtures import TEST_PAYLOAD
-from requests import HTTPError
+from unittest.mock import patch, Mock
 from client import GithubOrgClient
 
 
