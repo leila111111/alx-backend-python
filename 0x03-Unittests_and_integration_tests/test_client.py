@@ -56,8 +56,8 @@ class TestGithubOrgClient(unittest.TestCase):
         json_mock.assert_called_once_with("www.vue.com")
 
     @parameterized.expand([
-        ({"license": {"key": "dng_dng"}}, "dng_dng", True),
-        ({"license": {"key": "dng_omg"}}, "dng_dng", False)
+        ({"license": {"key": "my_license"}}, "my_license", True),
+        ({"license": {"key": "other_license"}}, "my_license", False)
     ])
     def test_has_license(self, repo: Dict,
                          licence: str, expect: bool) -> None:
